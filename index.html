@@ -45,10 +45,16 @@
 
     
 <body style="background-color:floralwhite;">
-    <h2><font color="black">Layer Cake Lemma</font></h2>
+    <h2><font color="black">Parabolic rescaling</font></h2>
     <p>
-        Let \(u\geq 0 \in \mathcal{L}^1(\Omega)\) where \( \Omega \) is a domain in \(\mathbb{R}^n\), then
-        \[\int_\Omega u d \mu = \int^\infty_0 \mu(\{x\in \Omega\}: u(x)>t\})dt.\]
+        Suppose \((M, g_t)\) is a Ricci flow on \(M\times I\) where \(M\) is a compact manifold, and \([t_0-r^2,t_0]\subset I\). Let $\tilde{g}(\tilde{t})$ be the Ricci flow such that the following holds:
+        \begin{itemize
+        \item \(\tilde{t}\in [-1,0]\)
+        \item \(\tilde{g}(\tilde{t})=g(t)\);
+        \item \( \partial_{\tilde{t}} \tilde{g}(\tilde{t}) = -2 Ric \tilde{g}(\tilde{t}).
+        \end{itemize}
+        then we have
+        \[\tilde{g}(\tilde{t}=\frac{1}{r^2}g(t_0 + r^2 \tilde{t}).\]
     </p>
 </body>
 </html>
