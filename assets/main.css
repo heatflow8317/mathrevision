@@ -24,10 +24,10 @@
 }
 
 body{
-    background-color: #fafafa;
+    background-color: #FFEBCD;
     background-size: cover;
     background-attachment: fixed;
-    color: #505050; 
+    color: #000000; 
     text-align:left;
     font-family:'Roboto',sans-serif;
     font-size:1em;
@@ -41,7 +41,7 @@ a.current{color: #52739e;}
 a.current:hover{color: #e82945;}
 a:hover{color: #b2132e;}
 a:active{color: #e82945;}
-h1,h2,h3,h4{clear:left; color: #813c54; margin:1.5em 0em 1em 0em; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
+h1,h2,h3,h4{clear:left; color: #000000; margin:1.5em 0em 1em 0em; font-family:'Comic Sans MS'; text-shadow: 1px 1px 2px #d0d0d0;}
 h1{font-size:2.67em;}
 h2{font-size:2.00em;}
 h3{font-size:1.67em;}
@@ -67,7 +67,7 @@ table{
     margin: 12px auto 24px auto;
     float: center;
     /* UNCOMMENT THIS FOR DEBUGGING THE ALIGNMENT */
-    /*border: 1px solid black;*/
+   /* border: 1px solid black;*/
 }
 th,td{
     text-align: left;
