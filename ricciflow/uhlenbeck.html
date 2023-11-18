@@ -73,9 +73,9 @@
     <div class="header">
       <a href="#default" class="logo">Math Revision Site</a>
       <div class="header-right">
-        <a href="#contact">Prev: Short-time Existence</a>
+        <a href="ricciflow/pararescale.html">Prev: Parabolic Rescaling</a>
         <a class="active" href="ricciflow/ricciflow.html">Back to Ricci Flow</a>
-        <a href="#about">Next: Uhlenbeck's trick</a>
+        <a href="ricciflow/decompose.html">Next: Decomposition of curvature</a>
       </div>
     </div>
 
@@ -93,7 +93,7 @@
                 While one can simplify it with the \(*\) notation and write 
                 \[(\partial_t-\Delta) Rm=Rm * Rm-Rc * Rm\]
                 instead, it is actually doing nothing. Alternatively, let \((V,h)\) be a vector bundle and \(u_0:(V,h)\rightarrow (TM, g_0)\) 
-                be a bundle isometry. Observe that \(u(t): (V,h)\rightarrow (TM, g(t))\) given by 
+                be a bundle isometry. We claim that \(u(t): (V,h)\rightarrow (TM, g(t))\) given by 
                 \[
                 \begin{align} 
                 u(0)&=u_0;\\
@@ -102,6 +102,27 @@
                 \]
                 remains an isometry along the flow, and
                 \[\partial_t R_{abcd}=\Delta R_{abcd} +2(B_{abcd}-B_{abdc}+B_{acbd}-B_{adbc}).\]
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>
+                    Proof
+                </h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\partial_t (u(t)^*g(t))_{ab}=\partial_t (u^i_au^j_b g_{ij})=
+                R^i_lu^l_au^j_bg_{ij}+u^i_au^j_b g_{ij} -2 u^i_au^j_bR_{ij}=R_{ab}+R_{ab}-2R_{ab}=0\),
+                so \(u(t)^*g(t)=u(0)g(0)=h\) for all \(t\). This shows that \(u(t)\) is an isometry for all \(t\). Further, we have
+                \[
+                \begin{align} 
+                    \partial_i R_{abcd} &= \partial_t (u^i_au^j_bu^k_cu^l_d R_{ijkl})\\
+                    &= \sum_{cyc\{a,b,c,d\}} R^i_mu^m_au^j_bu^k_cu^l_d R_{ijkl} + u^i_au^j_bu^k_cu^l_d \partial_t R_{ijkl}\\
+                    &= \Delta R_{abcd} + 2(B_{abcd}-B_{abdc}+B_{acbd}-B_{adbc})
+                \end{align}
+                \]
             </td>
         </tr>
     </table>
