@@ -88,65 +88,20 @@
         </tr>
         <tr>
             <td>
-                
-                    Suppose \((M, g_t)\) is a Ricci flow on \(M\times I\). Let \(t\in [t_0-r^2,t_0]\subset I\) and \(\tilde{g}(\tilde{t})\) be the Ricci flow such that the following holds:
-            </td>
-        </tr>
-        <tr>
-            <td>
-                (1): \(\tilde{t}\in [-1,0]\)
-          </td>
-        </tr>
-        <tr>
-            <td>
-                (2): \(\tilde{g}(\tilde{t})=g(t)\); and
-            </td>
-        </tr>
-        <tr>
-            <td>
-                (3): \( \partial_{\tilde{t}} \tilde{g}(\tilde{t}) = -2 Ric_{\tilde{g}(\tilde{t})}\).
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Then we have
-                    \[\tilde{g}(\tilde{t})=\frac{1}{r^2}g(t_0 + r^2 \tilde{t}).\]
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h4>Proof:</h4>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                For any \(t\in [t_0-r^2, t_0]\) there exists a unique \(\tilde{t}\in [-1,0]\) such that
-                \[t=t_0+r^2\tilde{t}.\]
-                To be precise, we interpolate between the conditions: (i) when \(\tilde{t}=-1, t=t_0-r^2\) and (ii) when \(\tilde{t}=0, t=t_0\). This gives a straight line on the \(t-\tilde{t}\) plane
-                \[\frac{\tilde{t}}{t-t_0}=\frac{-1-0}{t_0-r^2-t_0}=\frac{1}{r^2}.\]
-                Hence \( r^2 \tilde{t}=t-t_0\) and \(t=t_0+r^2\tilde{t}\).
-            </td>
-        </tr>
-        <tr>
-            <td>
-                We suppose \(\tilde{g}(\tilde{t})=Cg(t)\) for some \(C\) independent of \(t\) and try to figure out \(C\).
-               \[
-               \begin{align}
-               \partial_{\tilde{t}} \tilde{g}(\tilde{t})&= -2Ric(\tilde{g}(\tilde{t}))\\
-               &= -2Ric(Cg(\frac{1}{r^2}(t-t_0)))\\
-               &= -2Ric(g(t))\\
-               &= \partial_t g(t)
-               \end{align}
-               \]
-               On the other hand,
-               \[
-               \begin{align} 
-                \partial_{\tilde{t}}\tilde{g}(\tilde{t})&= \partial_{\tilde{t}} Cg(t_0+r^2\tilde{t})\\
-                &= Cr^2 \partial_t g(t)
-               \end{align}
-               \]
-               This forces \(Cr^2=1\) and therefore \(C=\frac{1}{r^2}\), so 
-               \[\tilde{g}(\tilde{t})=\frac{1}{r^2}g(t_0 + r^2 \tilde{t}).\]
+                The evolution of curvature has the following ugly expression:
+                \[\partial_t R_{ijkl}=\Delta R_{ikjl} + 2(B_{ijkl}-B_{ijlk}-B_{iljk}+B_{ikjl})-(R^p_iR_{pjkl}+R^p_j{ipkl}+R^p_kR_{ijpl}+R^p_lR_{ijkp}).\]
+                While one can simplify it with the \(*\) notation and write 
+                \[(\partial_t-\Delta) Rm=Rm * Rm-Rc * Rm\]
+                instead, it is actually doing nothing. Alternatively, let \((V,h)\) be a vector bundle and \(u_0:(V,h)\rightarrow (TM, g_0)\) 
+                be a bundle isometry. Observe that \(u(t): (V,h)\rightarrow (TM, g(t))\) given by 
+                \[
+                \begin{align} 
+                u(0)&=u_0;\\
+                \partial_t u^i_a &= R^i_lu^l_a
+                \end{align}
+                \]
+                remains an isometry along the flow, and
+                \[\partial_t R_{abcd}=\Delta R_{abcd} +2(B_{abcd}-B_{abdc}+B_{acbd}-B_{adbc}).\]
             </td>
         </tr>
     </table>
