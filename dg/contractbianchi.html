@@ -73,8 +73,8 @@
     <div class="header">
       <a href="#default" class="logo">Math Revision Site</a>
       <div class="header-right">
-        <a href="ricciflow/decompose.html">Prev: Decomposition of curvature</a>
-        <a class="active" href="ricciflow/ricciflow.html">Back to Ricci Flow</a>
+        <a href="ricciflow/decompose.html">Prev: Second Bianchi identity</a>
+        <a class="active" href="dg/dg.html">Back to Differential Geometry</a>
         <a href=".">Next: </a>
       </div>
     </div>
@@ -84,13 +84,12 @@
       <tr>
         <td>
           <h4>
-            Einstein metric
+            Contracted Bianchi Identity: the statement
           </h4>
       </tr>
       <tr>
         <td>
-          Let \((M, g)\) be Einstein. If \(dim M\geq 3\) then \((M,g)\) has constant scalar curvature. 
-          Further, if \(dim M=3\), then \((M,g)\) has constant sectional curvature.
+            \[g^{ij}\nabla_i R_{jp}= \frac{1}{2} \nabla_p R\]
         </td>
       </tr>
       <tr>
@@ -102,33 +101,24 @@
       </tr>
       <tr>
         <td>
-              By the <a href="dg/contractbianchi.html">contracted Bianchi identity</a>, 
-              \[g^{ij}\nabla_i R_{jp}= \frac{1}{2} \nabla_p R\]
-              Put \(E_{jp}=R_{jp}-\frac{1}{n}Rg_{jp}\) we obtain
-              \[g^{ij}\nabla_i E_{jp}=g^{ij}\nabla_i\left( R_{jp}-\frac{1}{n}Rg_{jp}\right)
-              =\frac{1}{2}\nabla_pR-\frac{1}{n}\nabla_i \delta^i_p R=\frac{1}{2}\nabla_pR-\frac{1}{n}
-              \nabla_pR=\left(\frac{1}{2}-\frac{1}{n}\right)\nabla_pR.\]
-              For \(n\geq 3\), the LHS is 0 if and only if \(R=0\).
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Besides, when \(n=3\), we can find a basis such that \(Rc\) is diagonal and \(E=0\) gives \(Rc=\frac{R}{3}g\).
-          \[Rc=\frac{1}{2}
-          \left(\begin{array}{ccc}
-          \lambda_2+\lambda_3&0&0\\
-          0&\lambda_3+\lambda_1&0\\
-          0&0&\lambda_1+\lambda_2
-          \end{array}\right)
-          =\frac{R}{3}g\\
-          =
-          \left(\begin{array}{ccc}
-          \frac{R}{3}&0&0\\
-          0&\frac{R}{3}&0\\
-          0&0&\frac{R}{3}
-          \end{array}\right)
-          \]
-          this forces \(\lambda_1=\lambda_2=\lambda_3=R\) and hence constant sectional curvature.
+              By the second Bianchi identity, 
+              \[\nabla_p R_{ijkl}+\nabla_i R_{jpkl}+\nabla_j R_{pikl}=0\]
+              we multiply both sides by the factor \(g^{ik}g^{jl}\) and always remember that we
+              "contract to the third index", that is,
+              \[ [\partial_i, \partial_j ] \partial k=R^l_{ijk}\partial_l;\]
+              \[g^{lp}R_{ijpk}=R^l_{ijk}\]
+              we obtain
+              \[
+              \begin{align} 
+              g^{ik}g^{jl}\left(\nabla_p R_{ijkl}+\nabla_i R_{jpkl}+\nabla_j R_{pikl} \right) &=0 \\
+              g^{ik}\left(\nabla_p (g^{jl}R_{jilk})-\nabla_i (g^{jl}R_{jplk})-\nabla_j (g^{jl} R_{pilk}) \right)&=0\\
+                g^{ik} (\nabla_p R_{ik}-\nabla_i R_{pk}-\nabla_j (g^{jl} R_{pilk}))&=0\\
+                \nabla_pR-\nabla_iR^i_p - \nabla_j (g^{ik}g^{jl} R_{pilk})&=0\\
+                \nabla_pR - \nabla_i R^i_p - \nabla_j R^j_p&=0\\
+                \nabla_pR&= 2\nabla_iR^i_p\\
+                g^{ij}\nabla_i R_{jp}&=\frac{1}{2}\nabla_pR.
+              \end{align}
+              \]
         </td>
       </tr>
     </table>
