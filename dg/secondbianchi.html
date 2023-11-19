@@ -73,9 +73,9 @@
     <div class="header">
       <a href="#default" class="logo">Math Revision Site</a>
       <div class="header-right">
-        <a href="dg/secondbianchi.html">Prev: Second Bianchi identity</a>
+        <a href="dg/firstbianchi.html">Prev: First Bianchi identity</a>
         <a class="active" href="dg/dg.html">Back to Differential Geometry</a>
-        <a href=".">Next: </a>
+        <a href="dg/contractbianchi.html">Next: Contracted Bianchi Identity </a>
       </div>
     </div>
 
@@ -84,12 +84,12 @@
       <tr>
         <td>
           <h4>
-            Contracted Bianchi Identity: the statement
+            Second Bianchi Identity: the statement
           </h4>
       </tr>
       <tr>
         <td>
-            \[g^{ij}\nabla_i R_{jp}= \frac{1}{2} \nabla_p R\]
+            \[\nabla_p R_{ijkl}+\nabla_i R_{jpkl}+\nabla_j R_{pikl}=0\]
         </td>
       </tr>
       <tr>
@@ -101,37 +101,21 @@
       </tr>
       <tr>
         <td>
-              By the second Bianchi identity, 
-              \[\nabla_p R_{ijkl}+\nabla_i R_{jpkl}+\nabla_j R_{pikl}=0\]
-              we multiply both sides by the factor \(g^{ik}g^{jl}\) and always remember that we
-              "contract to the third index", that is,
-              \[ [\partial_i, \partial_j ] \partial k=R^l_{ijk}\partial_l;\]
-              \[g^{lp}R_{ijpk}=R^l_{ijk}\]
-              we obtain
+              In normal coordinates, we have
               \[
-              \begin{align} 
-              g^{ik}g^{jl}\left(\nabla_p R_{ijkl}+\nabla_i R_{jpkl}+\nabla_j R_{pikl} \right) &=0 \\
-              g^{ik}\left(\nabla_p (g^{jl}R_{jilk})-\nabla_i (g^{jl}R_{jplk})-\nabla_j (g^{jl} R_{pilk}) \right)&=0\\
-                g^{ik} (\nabla_p R_{ik}-\nabla_i R_{pk}-\nabla_j (g^{jl} R_{pilk}))&=0\\
-                \nabla_pR-\nabla_iR^i_p - \nabla_j (g^{ik}g^{jl} R_{pilk})&=0\\
-                \nabla_pR - \nabla_i R^i_p - \nabla_j R^j_p&=0\\
-                \nabla_pR&= 2\nabla_iR^i_p\\
-                g^{ij}\nabla_i R_{jp}&=\frac{1}{2}\nabla_pR.
-              \end{align}
+              \nabla_mR_{ijkl}=\partial_m(\partial_i\Gamma^k_{jl}-\partial_j \Gamma^k_{il})
+                = \partial_m \partial_i \Gamma^k_{jl}-\partial_m \partial_j \Gamma^k_{il}
+              \]
+              and therefore the given LHS is equal to
+              \[
+              \partial_m \partial_i \Gamma^k_{jl}-\partial_m \partial_j \Gamma^k_{il}+
+              \partial_i \partial_j \Gamma^k_{ml}-\partial_i \partial_m \Gamma^k_{jl}+
+              \partial_j \partial_m \Gamma^k_{il}-\partial_j \partial_i \Gamma^k_{ml}=0
               \]
         </td>
       </tr>
     </table>
-    <table>
-        <thead>
-            Exteded reading:
-        </thead>
-        <tr>
-            <td>
-                <a href="ricciflow/einstein.html">Einstein metric</a>
-            </td>
-        </tr>
-    </table>
+
     <footer>
         Geometric Analysis
         &nbsp;|&nbsp; A Math Revision Notes made by <a href="https://github.com/heatflow8317">Clive</a>
